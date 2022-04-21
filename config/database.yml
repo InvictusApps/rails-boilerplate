@@ -30,7 +30,7 @@ development:
   adapter: postgis
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
-  database: text_to_prepared_development
+  database: backend_starter_dev
   username: <%= ENV.fetch('POSTGRES_USER') { 'postgres' } %>
   password: <%= ENV.fetch('POSTGRES_PASSWORD') { 'password' } %>
   host: <%= ENV.fetch('POSTGRES_HOST') { 'localhost' } %>
@@ -68,7 +68,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: <%= ENV.fetch('POSTGRES_DB') { 'text_to_prepared_test' } %>
+  database: <%= ENV.fetch('POSTGRES_DB') { 'backend_starter_test' } %>
   username: <%= ENV.fetch('POSTGRES_USER') { 'postgres' } %>
   password: <%= ENV.fetch('POSTGRES_PASSWORD') { 'password' } %>
   host: <%= ENV.fetch('POSTGRES_HOST') { 'localhost' } %>
